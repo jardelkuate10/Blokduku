@@ -6,10 +6,14 @@ class BoardBlock:
         self.active = False
         self.screen = screen
         self.rect = rect
-        self.color = (128, 128, 128)
+        self.color = None
         self.onColor = (0, 0, 255)
-        self.offColor = (128, 128, 128)
+        self.offColor = None
         self.on = False
+
+    def update_color(self, color):
+        self.color = color
+        self.offColor = color
 
     def activate(self):
         self.on = True
@@ -21,3 +25,4 @@ class BoardBlock:
 
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.rect)
+ 

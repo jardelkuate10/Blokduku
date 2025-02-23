@@ -20,7 +20,7 @@ class BelowBoard:
         self.load_shape()
 
     def load_shape(self):
-        self.shape = GameBlock(self.screen, width / 2 - bw, 700)
+        self.shape = GameBlock(self.screen, width / 2 - bw, 650)
 
     def draw(self):
         self.shape.draw()
